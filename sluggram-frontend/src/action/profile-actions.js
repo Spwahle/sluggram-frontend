@@ -17,8 +17,8 @@ export const profileUpdate = profile => ({
 
 export const profileFetchRequest = () => (dispatch, getState) => {
   let {auth} = getState();
-  return superagent.get(`${__API_URL__}/profiles/${/photos/me}`)//me
-    .set('Authorization', `Bearer ${auth}`)
+  return superagent.get(`${__API_URL__}/profiles/me`)
+  .set('Authorization', `Bearer ${auth}`)
     .then(res => {
       dispatch(profileSet(res.body.data));
       return res;
