@@ -46,7 +46,6 @@ class DashboardContainer extends React.Component {
             }}
           />
         )}
-        
         <Row>
           {utils.renderIf(this.props.photos,
             this.props.photos.map(photo =>
@@ -55,6 +54,7 @@ class DashboardContainer extends React.Component {
                 />
               }<br/></Col>
             ))}
+          
         </Row>
         
       </div>
